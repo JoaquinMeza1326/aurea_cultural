@@ -1,0 +1,32 @@
+.login-page {
+  background-image: url('../../../../assets/images/bg-login.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.cover-up{
+    top: 0;
+    left: 0;
+    background: rgba($color: #000000, $alpha: .6)
+}
+
+.login-container {
+  background-color: #faf6f1 !important;
+}
+
+.bg-login-btn {
+  background-color: #762c39 !important;
+  color: #fff !important;
+  font-weight: bold;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: #5c1f2c !important;
+  }
+}
+
+.login-brand-title {
+  font-family: 'Georgia', serif;
+  color: #e5c378;
+  line-height: 1.1;
+}

@@ -1,0 +1,36 @@
+.bg-home{
+    background-color: #f9f5ef;
+}
+
+.info-box{
+    background-color: #fff;
+}
+
+
+.custom-dark-button {
+  background-color: #000 !important;
+  width: 160px;
+  color: #fff !important;
+  border-radius: 20px;
+  padding: 6px 16px;
+}
+.custom-dark-button:hover {
+  background-color: #333 !important;
+}
+
+.filter-button{
+    background-color: #c3c3c3;
+}
+
+.filter-button:hover{
+    background-color: #000;
+}
+
+.star{
+  color: #c3c3c3;
+  cursor: pointer;
+}
+
+.star.favorite{
+  color: #692d3d;
+}

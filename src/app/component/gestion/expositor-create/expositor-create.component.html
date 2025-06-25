@@ -1,0 +1,39 @@
+<div class="container-fluid bg-home">
+  <app-menu-admin></app-menu-admin>
+  <div class="container">
+    <h4 class="mb-3">Crear expositor</h4>
+    <div class="form-container">
+      <form [formGroup]="expositorForm" (ngSubmit)="grabar()" class="form-grid">
+        <div class="form-field">
+          <mat-form-field appearance="fill" class="w-50">
+            <mat-label>Nombre expositor</mat-label>
+            <input matInput formControlName="nameExpositor" />
+            <mat-error
+              *ngIf="expositorForm.get('nameExpositor')?.hasError('required')"
+            >
+              El nombre del expositor es obligatorio.
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="d-flex mt-5 gap-3">
+          <button
+            mat-raised-button
+            class="btn custom-dark-button"
+            [disabled]="!expositorForm.valid"
+          >
+            Grabar
+          </button>
+          <button
+            mat-raised-button
+            class="btn custom-dark-button"
+            type="button"
+            (click)="cancelar()"
+          >
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

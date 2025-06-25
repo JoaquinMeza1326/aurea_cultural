@@ -1,0 +1,17 @@
+.interes-btn {
+  background-color: #e2b972 !important;
+  color: #ffff !important;
+  border-radius: 8px;
+  min-width: 170px;
+}
+.interes-btn:hover {
+  background-color: #c98d26 !important;
+}
+
+.interes-btn.active{
+  background-color: #c98d26 !important;
+}
+
+.interes-btn.active:hover{
+  filter: brightness(90%);
+}

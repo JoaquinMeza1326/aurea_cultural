@@ -1,0 +1,63 @@
+<div class="container-fluid bg-home">
+  <app-menu-admin></app-menu-admin>
+  <div class="container py-4">
+    <div class="d-flex flex-column align-items-center mb-4 gap-4">
+      <img
+        [src]="eventService.getImage(ticket.image)"
+        onerror="this.onerror=null;this.src='assets/images/img_not_found.jpg';"
+        class="img-fluid rounded-4 mb-3 mb-md-0 me-md-4"
+        style="width: 240px; height: 240px; object-fit: cover"
+      />
+      <div class="d-flex flex-column flex-md-row align-items-center">
+        <div>
+          <div class="fw-bold text-center">
+            {{ ticket.startDate | date : "LLL" }}
+          </div>
+          <div class="display-6 fw-bold">
+            {{ ticket.startDate | date : "d" }}
+          </div>
+        </div>
+
+        <div class="ms-md-4">
+          <h5 class="fw-bold mb-1">
+            {{ ticket.name }}
+          </h5>
+          <small>{{ ticket.descripcion }}</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabla de precios -->
+    <div class="col-12 col-md-8 mx-auto">
+      <app-table
+        [columns]="columns"
+        [data]="ticketTypes"
+        [showActions]="false"
+        [showSearch]="false"
+        [showPaginate]="false"
+        [showSelect]="true"
+        (editEventHandler)="select($event)"
+      ></app-table>
+
+      <div class="d-flex justify-content-end gap-3">
+        <button
+          type="button"
+          mat-flat-button
+          color="primary"
+          class="btn custom-dark-button text-white"
+          (click)="cancel()"
+        >
+          Cancelar
+        </button>
+        <!-- <button
+          mat-raised-button
+          color="primary"
+          class="custom-dark-button text-white px-4"
+          (click)="buy()"
+        >
+          Seleccionar
+        </button> -->
+      </div>
+    </div>
+  </div>
+</div>
