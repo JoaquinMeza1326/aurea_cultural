@@ -64,6 +64,8 @@ export class EventoComprarComponent {
   ) {
     const currentDate = new Date();
 
+//Comment
+    
     this.buyForm = this.fb.group({
       date: [currentDate],
       amount: [{ value: 0, disabled: true }],
