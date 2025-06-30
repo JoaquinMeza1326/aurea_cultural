@@ -38,7 +38,7 @@ export class ExpositorListComponent {
       },
       error: () => {
         this.snackbar.open('Error al obtener expositores', 'Cerrar', {
-          duration: 3000,
+          duration: 2000,
         });
       },
     });
