@@ -58,7 +58,7 @@ export class ExpositorListComponent {
         this.getExpositors();
       },
       error: () => {
-        this.snackbar.open('Error eliminar ciudad', 'Cerrar', {
+        this.snackbar.open('Error al eliminar ciudad', 'Cerrar', {
           duration: 3000,
         });
       },
