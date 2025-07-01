@@ -8,7 +8,11 @@
           <mat-form-field appearance="fill" class="w-50">
             <mat-label>Promotor</mat-label>
             <input matInput formControlName="details" />
-            
+            <mat-error
+              *ngIf="promotorForm.get('details')?.hasError('required')"
+            >
+              El nombre de la ciudad es obligatorio.
+            </mat-error>
           </mat-form-field>
         </div>
 
