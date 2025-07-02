@@ -1,0 +1,80 @@
+<div class="container-fluid bg-home">
+  <app-menu-admin></app-menu-admin>
+  <div class="container py-4">
+    <div class="d-flex flex-column align-items-center mb-4 gap-4">
+      <img
+        [src]="eventService.getImage(event.image)"
+        onerror="this.onerror=null;this.src='assets/images/img_not_found.jpg';"
+        class="img-fluid rounded-4 mb-3 mb-md-0 me-md-4"
+        style="width: 240px; height: 240px; object-fit: cover"
+      />
+      <div class="d-flex flex-column flex-md-row align-items-center">
+        <div>
+          <div class="fw-bold text-center">
+            {{ event.startDate | date : "LLL" }}
+          </div>
+          <div class="display-6 fw-bold">
+            {{ event.startDate | date : "d" }}
+          </div>
+        </div>
+
+        <div class="ms-md-4">
+          <h5 class="fw-bold mb-1">
+            {{ event.name }}
+          </h5>
+          <small>{{ event.descripcion }}</small>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-12 col-md-6 p-4 rounded-4 mx-auto form-container"
+      style="background-color: #dadada"
+    >
+      <form [formGroup]="buyForm" (ngSubmit)="grabar()" class="form-grid">
+        <mat-form-field appearance="fill" class="w-100 mb-3">
+          <mat-label>Cantidad Entradas</mat-label>
+          <input matInput formControlName="quantity" type="number" />
+          <mat-error *ngIf="buyForm.get('quantity')?.hasError('required')">
+            La cantidad es requerida
+          </mat-error>
+          <mat-error *ngIf="buyForm.get('quantity')?.hasError('min')">
+            Debe comprar almenos 1 ticket
+          </mat-error>
+          <mat-error *ngIf="buyForm.get('quantity')?.hasError('max')">
+            No puedes comprar mas de {{ availableQuantity }} tickets
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="w-100 mb-3">
+          <mat-label>Precio</mat-label>
+          <input matInput formControlName="price" type="text" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="w-100 mb-3">
+          <mat-label>Total</mat-label>
+          <input matInput formControlName="amount" type="text" />
+        </mat-form-field>
+
+        <div class="d-flex justify-content-end gap-3">
+          <button
+            type="button"
+            mat-flat-button
+            color="primary"
+            class="btn custom-dark-button text-white"
+            (click)="cancel()"
+          >
+            Cancelar
+          </button>
+          <button
+            mat-flat-button
+            color="primary"
+            class="btn custom-dark-button text-white"
+            [disabled]="!buyForm.valid"
+          >
+            Pagar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
