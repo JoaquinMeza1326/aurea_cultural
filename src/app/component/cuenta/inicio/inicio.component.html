@@ -1,0 +1,74 @@
+<div class="container-fluid bg-home">
+  <app-menu-admin></app-menu-admin>
+  <div class="container">
+    <div class="row gy-4 mt-2">
+      <div class="col-8 mx-auto">
+        <div
+          class="d-flex flex-column flex-md-row align-items-center bg-maroon rounded-4 p-4 text-white"
+        >
+          <img
+            src="assets/images/datos.png"
+            alt="datos"
+            class="img-fluid rounded-4 me-md-4 mb-3 mb-md-0"
+            style="width: 200px; height: auto"
+          />
+          <div class="flex-fill d-flex flex-column align-items-center">
+            <h4 class="fw-semibold text-center">Ingresa aqui sus datos</h4>
+            <p class="text-center w-50 mx-auto">
+              Estos datos serán utilizados para brindarle un perfil mucho más
+              detallado y personalizado
+            </p>
+            <a [routerLink]="['/user/update']" class="btn btn-dark custom-button">Ingresar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-8 mx-auto">
+        <div
+          class="d-flex flex-column flex-md-row align-items-center bg-maroon rounded-4 p-4 text-white"
+        >
+          <img
+            src="assets/images/intereses.png"
+            alt="intereses"
+            class="img-fluid rounded-4 me-md-4 mb-3 mb-md-0"
+            style="width: 200px; height: auto"
+          />
+          <div class="flex-fill d-flex flex-column align-items-center">
+            <h4 class="fw-semibold text-center">Tus Intereses</h4>
+            <p class="text-center w-50 mx-auto">
+              Menciónanos qué te gustaría ver o tus intereses y preferencias.
+            </p>
+            <a [routerLink]="['/interests']" class="btn btn-dark custom-button"
+              >Ingresar</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-8 mx-auto">
+        <div
+          class="d-flex flex-column flex-md-row align-items-center bg-maroon rounded-4 p-4 text-white"
+        >
+          <img
+            src="assets/images/eventos.png"
+            alt="eventos"
+            class="img-fluid rounded-4 me-md-4 mb-3 mb-md-0"
+            style="width: 200px; height: auto"
+          />
+          <div class="flex-fill d-flex flex-column align-items-center">
+            <h4 class="fw-semibold text-center">Eventos culturales ahora</h4>
+            <p class="text-center w-50 mx-auto">
+              Mira los últimos eventos culturales de diferentes índoles para
+              amantes del arte como tú
+            </p>
+            <a
+              [routerLink]="['/events/list']"
+              class="btn btn-dark custom-button"
+              >Ingresar</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
