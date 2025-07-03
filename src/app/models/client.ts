@@ -8,4 +8,3 @@ export interface Client {
   dni: string;
   user_id: string;
 }
-// export interface ClientCreate {
