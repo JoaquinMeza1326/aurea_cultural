@@ -34,37 +34,7 @@
     </div>
     
 
-    <div class="row mb-3 align-items-center">
-      <div class="col-md-4 fw-semibold fs-4">Periodo artístico</div>
-      <div class="col-md-8 d-flex flex-wrap gap-2">
-        <button
-          mat-button
-          class="interes-btn"
-          [ngClass]="{ active: categoriasSeleccionadas.includes('Barroco') }"
-          (click)="seleccionarCategoria('Barroco')"
-        >
-          Barroco
-        </button>
-        <button
-          mat-button
-          class="interes-btn"
-          [ngClass]="{ active: categoriasSeleccionadas.includes('Rococó') }"
-          (click)="seleccionarCategoria('Rococó')"
-        >
-          Rococó
-        </button>
-        <button
-          mat-button
-          class="interes-btn"
-          [ngClass]="{
-            active: categoriasSeleccionadas.includes('Impresionismo')
-          }"
-          (click)="seleccionarCategoria('Impresionismo')"
-        >
-          Impresionismo
-        </button>
-      </div>
-    </div>
+ 
 
     <div class="row mb-4 align-items-center">
       <div class="col-md-4 fw-semibold fs-4">Género literario</div>
