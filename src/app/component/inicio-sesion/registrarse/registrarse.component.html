@@ -20,7 +20,15 @@
             />
           </mat-form-field>
 
-          
+          <mat-form-field appearance="fill" class="w-100 mb-3">
+            <mat-label>Apellido</mat-label>
+            <input
+              matInput
+              placeholder="Ingresa tu apellido"
+              [(ngModel)]="user.lastName"
+              name="lastName"
+            />
+          </mat-form-field>
           <mat-form-field appearance="fill" class="w-100 mb-3">
             <mat-label>DNI</mat-label>
             <input
