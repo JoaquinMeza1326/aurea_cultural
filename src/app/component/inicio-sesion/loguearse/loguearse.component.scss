@@ -1,3 +1,14 @@
+.login-page {
+  background-image: url('../../../../assets/images/bg-login.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.cover-up{
+    top: 0;
+    left: 0;
+    background: rgba($color: #000000, $alpha: .6)
+}
 
 .login-container {
   background-color: #faf6f1 !important;
