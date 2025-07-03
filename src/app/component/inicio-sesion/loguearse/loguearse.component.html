@@ -29,7 +29,14 @@
             />
           </mat-form-field>
 
-          
+          <button
+            mat-raised-button
+            color="primary"
+            class="w-100 mb-2 bg-login-btn"
+            (click)="onLogin()"
+          >
+            INICIAR
+          </button>
 
           <a
             [routerLink]="['/register']"
