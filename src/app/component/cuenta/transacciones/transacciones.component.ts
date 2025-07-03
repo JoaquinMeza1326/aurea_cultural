@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { AuthService } from '../../../services/auth.service';
 import { Transaction } from '../../../models/transaction';
 import { TransactionsService } from '../../../services/transactions.service';
+// Importing necessary modules and services
 
 @Component({
   selector: 'app-transacciones',
