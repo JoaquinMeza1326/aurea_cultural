@@ -84,7 +84,42 @@ export class EventoComprarComponent {
       ?.valueChanges.subscribe(() => this.updateAmount());
   }
 
-  
+  grabar() {
+    this.transactionService.add(this.buyForm.getRawValue()).subscribe({
+      next: (data: Transaction) => {
+        this.savePurchasedTicket(data);
+      },
+      error: () => {
+        this.snackbar.open('Error comprar ticket', 'Cerrar', {
+          duration: 3000,
+        });
+      },
+    });
+  }
+
+  savePurchasedTicket(data: Transaction) {
+    this.purchasedTicket
+      .add({
+        id: 0,
+        purchaseDate: data.date,
+        purchasePrice: Number(data.amount),
+        ticketType_id: this.event.ticketTypeId,
+        transaction_id: data.id,
+      })
+      .subscribe({
+        next: () => {
+          this.router.navigate(['/events/list']);
+          this.snackbar.open('Compra realizada', 'Cerrar', {
+            duration: 3000,
+          });
+        },
+        error: () => {
+          this.snackbar.open('Error comprar ticket', 'Cerrar', {
+            duration: 3000,
+          });
+        },
+      });
+  }
 
    updateAmount(): void {
     const price = this.buyForm.get('price')?.value || 0;
