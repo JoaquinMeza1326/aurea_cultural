@@ -129,45 +129,7 @@ export class EventoComprarComponent {
     this.buyForm.get('amount')?.setValue(amount);
   }
 
-  getTicketInfo() {
-    const idType = this.route.snapshot.paramMap.get('idType') || 0;
-    this.ticketTypeService.getById(Number(idType)).subscribe({
-      next: (data: TicketType) => {
-        this.ticketType = data;
-        this.getEventById();
-      },
-      error: () => {
-        this.snackbar.open('Error al cargar los tipos de evento', 'Cerrar', {
-          duration: 3000,
-        });
-      },
-    });
-  }
-
-  getEventById() {
-    const id = this.route.snapshot.paramMap.get('id') || 0;
-    this.eventService.getById(Number(id)).subscribe({
-      next: (data: EventMF) => {
-        this.event = {
-          id: data.id,
-          descripcion: data.descripcion,
-          endDate: data.endDate,
-          name: data.nombre,
-          startDate: data.startDate,
-          price: this.ticketType.price,
-          image: data.image,
-          ticketTypeId: this.ticketType.id,
-        };
-        this.availableQuantity = this.ticketType.availableQuantity;
-        this.setValuesValidationForm();
-      },
-      error: () => {
-        this.snackbar.open('Error al obtener evento', 'Cerrar', {
-          duration: 3000,
-        });
-      },
-    });
-  }
+  
 
   setValuesValidationForm() {
     this.buyForm.patchValue({
