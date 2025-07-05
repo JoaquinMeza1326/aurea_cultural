@@ -1,1 +1,15 @@
-
+<div class="container-fluid bg-home">
+  <app-menu-admin></app-menu-admin>
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <h3 class="mb-4">Entradas compradas</h3>
+      </div>
+    </div>
+    <app-table
+      [columns]="columns"
+      [data]="tickets"
+      [showActions]="false"
+    ></app-table>
+  </div>
+</div>
