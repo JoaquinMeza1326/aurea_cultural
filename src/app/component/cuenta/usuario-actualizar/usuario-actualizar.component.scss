@@ -1,1 +1,12 @@
 
+.interes-btn {
+  background-color: #e2b972 !important;
+  color: #ffff !important;
+  border-radius: 8px;
+  min-width: 170px;
+  pointer-events: none;
+}
+
+.interes-btn.active{
+  background-color: #c98d26 !important;
+}
