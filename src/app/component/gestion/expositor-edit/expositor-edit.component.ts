@@ -61,22 +61,7 @@ export class ExpositorEditComponent {
     });
   }
 
-  grabar() {
-    this.expositorService.update(this.id, this.expositorForm.value).subscribe({
-      next: () => {
-        this.snackbar.open('Expositor actualizado correctamente', 'OK', {
-          duration: 3000,
-        });
-
-        this.router.navigate(['/admin/expositor-list']);
-      },
-      error: () => {
-        this.snackbar.open('Error al actualizar expositor', 'OK', {
-          duration: 3000,
-        });
-      },
-    });
-  }
+  
   cancelar() {
     this.router.navigate(['/admin/expositor-list']);
   }
