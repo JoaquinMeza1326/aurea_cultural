@@ -64,13 +64,7 @@ export class EventoComprarComponent {
   ) {
     const currentDate = new Date();
 
-    this.buyForm = this.fb.group({
-      date: [currentDate],
-      amount: [{ value: 0, disabled: true }],
-      price: [{ value: 0, disabled: true }],
-      quantity: [0, [Validators.required, Validators.min(0)]],
-      client_id: [this.authService.getIdUser()],
-    });
+    
   }
 
   ngOnInit(): void {
