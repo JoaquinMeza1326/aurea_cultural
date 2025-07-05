@@ -43,7 +43,21 @@ export class EventtypeCreateComponent {
     });
   }
 
-  
+grabar() {
+    this.eventTypeService.add(this.eventTypeForm.value).subscribe({
+      next: () => {
+        this.router.navigate(['/admin/eventtype-list']);
+        this.snackbar.open('Tipo de evento registrado correctamente', 'OK', {
+          duration: 3000,
+        });
+      },
+      error: () => {
+        this.snackbar.open('Error al registrar un tipo de evento', 'OK', {
+          duration: 3000,
+        });
+      },
+    });
+  }
   cancelar() {
     this.router.navigate(['/admin/eventtype-list']);
   }
