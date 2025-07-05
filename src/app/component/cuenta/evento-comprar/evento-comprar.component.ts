@@ -121,7 +121,13 @@ export class EventoComprarComponent {
       });
   }
 
- 
+   updateAmount(): void {
+    const price = this.buyForm.get('price')?.value || 0;
+    const quantity = this.buyForm.get('quantity')?.value || 0;
+    const amount = price * quantity;
+
+    this.buyForm.get('amount')?.setValue(amount);
+  }
 
   getTicketInfo() {
     const idType = this.route.snapshot.paramMap.get('idType') || 0;
