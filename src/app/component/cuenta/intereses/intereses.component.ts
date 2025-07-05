@@ -4,7 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-
+// import { FormsModule } from '@angular/forms'; // Import FormsModule for ngModel
 @Component({
   selector: 'app-intereses',
   standalone: true,
