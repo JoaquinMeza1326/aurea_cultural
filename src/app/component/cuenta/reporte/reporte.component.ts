@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ClaimService } from '../../../services/claim.service';
 import { CommonModule } from '@angular/common';
-
+// Importing necessary modules and components
 @Component({
   selector: 'app-reporte',
   standalone: true,
