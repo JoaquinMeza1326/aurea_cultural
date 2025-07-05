@@ -76,7 +76,12 @@ export class EventoComprarComponent {
   ngOnInit(): void {
     this.getTicketInfo();
 
-    
+    this.buyForm
+      .get('quantity')
+      ?.valueChanges.subscribe(() => this.updateAmount());
+    this.buyForm
+      .get('price')
+      ?.valueChanges.subscribe(() => this.updateAmount());
   }
 
   grabar() {
