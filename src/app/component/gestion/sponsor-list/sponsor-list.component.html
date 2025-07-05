@@ -16,6 +16,11 @@
         </button>
       </div>
     </div>
-    
+    <app-table
+      [columns]="columns"
+      [data]="sponsors"
+      (editEventHandler)="edit($event)"
+      (deleteEventHandler)="delete($event)"
+    ></app-table>
   </div>
 </div>
