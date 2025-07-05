@@ -36,7 +36,13 @@
           <div class="col-12 col-md-6">
             <div class="form-field">
               <mat-form-field appearance="fill" class="w-100">
-                
+<mat-label>Descripción</mat-label>
+                <input matInput formControlName="description" />
+                <mat-error
+                  *ngIf="eventTypeForm.get('description')?.hasError('required')"
+                >
+                  La descripción es obligatorio.
+                </mat-error>
               </mat-form-field>
             </div>
           </div>
