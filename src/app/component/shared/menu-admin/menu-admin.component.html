@@ -1,0 +1,36 @@
+<header
+  class="d-flex justify-content-between align-items-center px-4 py-3 header"
+>
+  <div class="text-center flex-fill">
+    <h5 class="m-0 fw-bold aurea-title">AUREA CULTURA</h5>
+  </div>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-button">
+    <mat-icon class="fs-2">menu</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu" class="custom-menu">
+    @if(isAdmin){
+    <a [routerLink]="['/admin/city-list']" mat-menu-item>Ciudades</a>
+    <a [routerLink]="['/admin/promotor-list']" mat-menu-item>Promotores</a>
+    <a [routerLink]="['/admin/event-list']" mat-menu-item>Eventos</a>
+    <a [routerLink]="['/admin/expositor-list']" mat-menu-item>Expositores</a>
+    <a [routerLink]="['/admin/sponsor-list']" mat-menu-item>Sponsors</a>
+    <a [routerLink]="['/admin/eventtype-list']" mat-menu-item
+      >Tipos de evento</a
+    >
+    <a [routerLink]="['/admin/tickettype-list']" mat-menu-item
+      >Tipos de tickets</a
+    >
+    } @else {
+    <a [routerLink]="['/home']" mat-menu-item>Inicio</a>
+    <a [routerLink]="['/user/update']" mat-menu-item>Actualizar datos</a>
+    <a [routerLink]="['/tickets']" mat-menu-item>Mis Entradas</a>
+    <a [routerLink]="['/transactions']" mat-menu-item>Mis Transacciones</a>
+    <a [routerLink]="['/events/favorites']" mat-menu-item>Eventos favoritos</a>
+    <a [routerLink]="['/events/list']" mat-menu-item>Eventos</a>
+    <a [routerLink]="['/report']" mat-menu-item>Reclamo</a>
+    }
+    <a mat-menu-item (click)="logOut()">Cerrar Sesión</a>
+  </mat-menu>
+</header>
