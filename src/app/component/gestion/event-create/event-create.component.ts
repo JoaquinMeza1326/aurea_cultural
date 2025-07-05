@@ -27,7 +27,7 @@ import { SponsorService } from '../../../services/sponsor.service';
 import { ExpositorService } from '../../../services/expositor.service';
 import { Expositor } from '../../../models/expositor';
 import { Sponsor } from '../../../models/Sponsor';
-// cambios
+
 @Component({
   selector: 'app-event-create',
   standalone: true,
