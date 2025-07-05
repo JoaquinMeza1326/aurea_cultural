@@ -26,6 +26,6 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(),
     provideAnimationsAsync(),
     provideNativeDateAdapter(),
-    provideHttpClient(withFetch(), withInterceptors([AuthInterceptor])),
+    provideHttpClient(withFetch(), withInterceptors([AuthInterceptor])), provideAnimationsAsync(),
   ],
 };
