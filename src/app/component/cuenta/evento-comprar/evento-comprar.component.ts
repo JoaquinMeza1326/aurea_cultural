@@ -123,7 +123,7 @@ export class EventoComprarComponent {
       });
   }
 
-  updateAmount(): void {
+   updateAmount(): void {
     const price = this.buyForm.get('price')?.value || 0;
     const quantity = this.buyForm.get('quantity')?.value || 0;
     const amount = price * quantity;

@@ -43,7 +43,7 @@ export class EventtypeCreateComponent {
     });
   }
 
-  grabar() {
+grabar() {
     this.eventTypeService.add(this.eventTypeForm.value).subscribe({
       next: () => {
         this.router.navigate(['/admin/eventtype-list']);
