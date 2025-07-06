@@ -46,7 +46,29 @@ export class CityCreateComponent {
     });
   }
 
-
+    grabar() {
+    if (this.cityForm.valid) {
+      this.cityService.create(this.cityForm.value).subscribe({
+        next: () => {
+          this.router.navigate(['/admin/city-list']);
+          this.snackbar.open('Ciudad registrada correctamente', 'OK', {
+            duration: 3000,
+          });
+        },
+        error: () => {
+          this.snackbar.open('Ocurrió un error al registrar la ciudad', 'OK', {
+            duration: 3000,
+          });
+        },
+      });
+    } else {
+      this.snackbar.open(
+        'Por favor, complete todos los campos obligatorios',
+        'OK',
+        { duration: 2000 }
+      );
+    }
+  }
 
   cancelar() {
     this.router.navigate(['/admin/city-list']);
