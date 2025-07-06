@@ -66,26 +66,7 @@ export class UsuarioActualizarComponent {
     this.obtenerPreferencias();
   }
 
-  getClientById() {
-    this.clientService.getById(this.userId).subscribe({
-      next: (data: Client) => {
-        this.clientForm.patchValue({
-          firstName: data.firstName,
-          lastName: data.lastName,
-          gender: data.gender,
-          age: data.age,
-          phone: data.phone,
-          dni: data.dni,
-        });
-      },
-      error: () => {
-        this.snackbar.open('Error al obtener datos usuario', 'Error', {
-          duration: 2000,
-        });
-        this.router.navigate(['/home']);
-      },
-    });
-  }
+
 
   obtenerPreferencias() {
     const item = localStorage.getItem('categoriasSeleccionadas');
