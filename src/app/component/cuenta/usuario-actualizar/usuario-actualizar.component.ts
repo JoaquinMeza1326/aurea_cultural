@@ -87,10 +87,7 @@ export class UsuarioActualizarComponent {
     });
   }
 
-  obtenerPreferencias() {
-    const item = localStorage.getItem('categoriasSeleccionadas');
-    this.categoriasSeleccionadas = item ? (JSON.parse(item) as string[]) : [];
-  }
+
 
   grabar() {
     this.clientService.update(this.userId, this.clientForm.value).subscribe({
