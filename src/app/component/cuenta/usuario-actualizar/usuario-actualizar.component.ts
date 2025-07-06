@@ -92,21 +92,7 @@ export class UsuarioActualizarComponent {
     this.categoriasSeleccionadas = item ? (JSON.parse(item) as string[]) : [];
   }
 
-  grabar() {
-    this.clientService.update(this.userId, this.clientForm.value).subscribe({
-      next: () => {
-        this.snackbar.open('Datos actualizados', 'OK', {
-          duration: 2000,
-        });
-        this.router.navigate(['/home']);
-      },
-      error: () => {
-        this.snackbar.open('Error al actualizar datos', 'Error', {
-          duration: 2000,
-        });
-      },
-    });
-  }
+
 
   cancel() {
     this.router.navigate(['/home']);
