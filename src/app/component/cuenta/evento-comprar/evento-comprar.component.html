@@ -1,9 +1,9 @@
 <div class="container-fluid bg-home">
   <app-menu-admin></app-menu-admin>
   <div class="container py-4">
-    <div class="d-flex flex-column align-items-center mb-4 gap-4">
+     <div class="d-flex flex-column align-items-center mb-4 gap-4">
       <img
-        [src]="eventService.getImage(event.image)"
+        [src]="eventService.getImage(event.image)" 
         onerror="this.onerror=null;this.src='assets/images/img_not_found.jpg';"
         class="img-fluid rounded-4 mb-3 mb-md-0 me-md-4"
         style="width: 240px; height: 240px; object-fit: cover"
@@ -18,7 +18,7 @@
           </div>
         </div>
 
-        <div class="ms-md-4">
+        <div class="ms-md-4"> 
           <h5 class="fw-bold mb-1">
             {{ event.name }}
           </h5>
@@ -47,7 +47,7 @@
 
         <mat-form-field appearance="fill" class="w-100 mb-3">
           <mat-label>Precio</mat-label>
-          <input matInput formControlName="price" type="text" />
+          <input matInput formControlName="price" type="text" /> 
         </mat-form-field>
 
         <mat-form-field appearance="fill" class="w-100 mb-3">

@@ -6,15 +6,15 @@
       <form [formGroup]="cityForm" (ngSubmit)="grabar()" class="form-grid">
         <div class="form-field">
           <mat-form-field appearance="fill" class="w-50">
-            <mat-label>Nombre de la Ciudad</mat-label>
-            <input matInput formControlName="name" />
+             <mat-label>Nombre de la Ciudad</mat-label>
+             <input matInput formControlName="name" />
             <mat-error *ngIf="cityForm.get('name')?.hasError('required')">
-              El nombre de la ciudad es obligatorio.
+              El nombre de la ciudad es obligatorio. 
             </mat-error>
             <mat-error *ngIf="cityForm.get('name')?.hasError('minlength')">
               El nombre debe tener al menos 3 caracteres.
             </mat-error>
-          </mat-form-field>
+          </mat-form-field> 
         </div>
 
         //comment 
