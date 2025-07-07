@@ -5,9 +5,15 @@
     <div class="form-container">
       <form [formGroup]="cityForm" (ngSubmit)="grabar()" class="form-grid">
         <div class="form-field">
+
+                    <mat-form-field appearance="fill" class="w-50">
+            <mat-label>Nombre de la Ciudad</mat-label>
+            <input matInput formControlName="name" />
+
           <mat-form-field appearance="fill" class="w-50">
              <mat-label>Nombre de la Ciudad</mat-label>
              <input matInput formControlName="name" />
+
             <mat-error *ngIf="cityForm.get('name')?.hasError('required')">
               El nombre de la ciudad es obligatorio. 
             </mat-error>
@@ -20,7 +26,7 @@
         //comment 
         
         <div class="d-flex mt-5 gap-3">
-          <button
+           <button
             mat-raised-button
             class="btn custom-dark-button"
             [disabled]="!cityForm.valid"

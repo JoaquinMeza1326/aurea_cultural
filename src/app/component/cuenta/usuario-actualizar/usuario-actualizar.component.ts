@@ -66,7 +66,7 @@ export class UsuarioActualizarComponent {
     this.obtenerPreferencias();
   }
 
-  getClientById() {
+    getClientById() {
     this.clientService.getById(this.userId).subscribe({
       next: (data: Client) => {
         this.clientForm.patchValue({
@@ -87,12 +87,12 @@ export class UsuarioActualizarComponent {
     });
   }
 
-  obtenerPreferencias() {
+    obtenerPreferencias() {
     const item = localStorage.getItem('categoriasSeleccionadas');
     this.categoriasSeleccionadas = item ? (JSON.parse(item) as string[]) : [];
   }
 
-  grabar() {
+    grabar() {
     this.clientService.update(this.userId, this.clientForm.value).subscribe({
       next: () => {
         this.snackbar.open('Datos actualizados', 'OK', {

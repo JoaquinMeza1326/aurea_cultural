@@ -46,7 +46,7 @@ export class CityCreateComponent {
     });
   }
 
-  grabar() {
+    grabar() {
     if (this.cityForm.valid) {
       this.cityService.create(this.cityForm.value).subscribe({
         next: () => {
