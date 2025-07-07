@@ -1,4 +1,4 @@
 export interface Sponsor {
-  id: number;
+  id: number; 
   nombreSponsor: string;
 }

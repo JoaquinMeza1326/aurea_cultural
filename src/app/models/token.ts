@@ -1,7 +1,7 @@
 export class Token {
     jwtToken: string;
     authorities: string;
-    userId: number;
+    userId: number; 
 
     constructor(jwtToken: string, authorities: string, userId: number) {
         this.jwtToken = jwtToken;
